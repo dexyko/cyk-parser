@@ -1,6 +1,8 @@
 
 #include "rule.h"
 
+string STARTING_SYMBOL = "S";
+
 map<string, int> Rule::NT2id;
 map<int, string> Rule::id2NT;
 
@@ -22,4 +24,11 @@ int Rule::getID(const string& NT) {
         id2NT[NT2id[NT]] = NT;
     }
     return NT2id[NT];
+}
+
+int Rule::GetStartingID() {
+    if (NT2id.find(STARTING_SYMBOL) == NT2id.end()) {
+        return -1;
+    }
+    return NT2id[STARTING_SYMBOL];
 }

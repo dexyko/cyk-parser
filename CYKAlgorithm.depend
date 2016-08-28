@@ -31,3 +31,66 @@
 1472372302 source:c:\users\sidejan\google drive\__misc\phd\inteligentnaobradateksta\cykalgorithm\parsetree.cpp
 	"parsetree.h"
 
+1472413286 source:c:\users\sidejan\google drive\__misc\phd\inteligentnaobradateksta\cyk-parser\helper.cpp
+	"helper.h"
+
+1472413298 c:\users\sidejan\google drive\__misc\phd\inteligentnaobradateksta\cyk-parser\helper.h
+	<vector>
+	<string>
+	<iostream>
+	<iterator>
+	<sstream>
+	<algorithm>
+
+1472372302 source:c:\users\sidejan\google drive\__misc\phd\inteligentnaobradateksta\cyk-parser\parsetree.cpp
+	"parsetree.h"
+
+1472407500 c:\users\sidejan\google drive\__misc\phd\inteligentnaobradateksta\cyk-parser\parsetree.h
+	<string>
+	<sstream>
+
+1472406813 source:c:\users\sidejan\google drive\__misc\phd\inteligentnaobradateksta\cyk-parser\rule.cpp
+	"rule.h"
+
+1472406807 c:\users\sidejan\google drive\__misc\phd\inteligentnaobradateksta\cyk-parser\rule.h
+	<string>
+	<sstream>
+	<map>
+
+1472406883 source:c:\users\sidejan\google drive\__misc\phd\inteligentnaobradateksta\cyk-parser\cyk.cpp
+	"cyk.h"
+
+1472412778 source:c:\users\sidejan\google drive\__misc\phd\inteligentnaobradateksta\cyk-parser\grammar.cpp
+	"grammar.h"
+
+1472405402 c:\users\sidejan\google drive\__misc\phd\inteligentnaobradateksta\cyk-parser\grammar.h
+	<string>
+	<vector>
+	<fstream>
+	<iostream>
+	"rule.h"
+	"helper.h"
+
+1472412667 source:c:\users\sidejan\google drive\__misc\phd\inteligentnaobradateksta\cyk-parser\main.cpp
+	<fstream>
+	<sstream>
+	<iostream>
+	<map>
+	<vector>
+	"helper.h"
+	"rule.h"
+	"parsetree.h"
+	"grammar.h"
+	"cyk.h"
+
+1472413314 c:\users\sidejan\google drive\__misc\phd\inteligentnaobradateksta\cyk-parser\cyk.h
+	<fstream>
+	<sstream>
+	<iostream>
+	<map>
+	<vector>
+	"helper.h"
+	"rule.h"
+	"parsetree.h"
+	"grammar.h"
+
