@@ -20,7 +20,7 @@ int Rule::getNumNTs() {
 
 int Rule::getID(const string& NT) {
     if (NT2id.find(NT) == NT2id.end()) {
-        NT2id[NT] = NT2id.size() - 1;
+        NT2id[NT] = NT2id.size();
         id2NT[NT2id[NT]] = NT;
     }
     return NT2id[NT];
@@ -31,4 +31,9 @@ int Rule::GetStartingID() {
         return -1;
     }
     return NT2id[STARTING_SYMBOL];
+}
+
+void Rule::Reset() {
+    NT2id.clear();
+    id2NT.clear();
 }

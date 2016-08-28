@@ -52,7 +52,7 @@ bool Helper::IsNonTerminal(const string& s) {
         return false;
     }
     string name = Trim(parts[0], " ");
-    return isupper(name[0]);
+    return isupper(name[0]) != 0;
 }
 
 bool Helper::IsTerminal(const string& s) {
@@ -61,5 +61,5 @@ bool Helper::IsTerminal(const string& s) {
         return false;
     }
     string name = Trim(parts[0], " ");
-    return islower(name[0]);
+    return islower(name[0]) != 0;
 }

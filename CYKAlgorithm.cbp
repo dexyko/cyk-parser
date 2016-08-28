@@ -31,6 +31,24 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
+		<Unit filename="LICENSE" />
+		<Unit filename="README.md" />
+		<Unit filename="cyk.cpp" />
+		<Unit filename="cyk.h" />
+		<Unit filename="grammar.cpp" />
+		<Unit filename="grammar.h" />
+		<Unit filename="helper.cpp" />
+		<Unit filename="helper.h" />
+		<Unit filename="main.cpp" />
+		<Unit filename="parsetree.cpp" />
+		<Unit filename="parsetree.h" />
+		<Unit filename="rule.cpp" />
+		<Unit filename="rule.h" />
+		<Unit filename="test_files/test1.in" />
+		<Unit filename="test_files/test2.in" />
+		<Unit filename="test_files/test3.in" />
+		<Unit filename="test_files/test4.in" />
+		<Unit filename="test_files/test5.in" />
 		<Extensions>
 			<code_completion />
 			<envvars />

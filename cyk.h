@@ -16,7 +16,9 @@ using namespace std;
 class CYKParser {
 public:
     bool Parse(const string& sequence, ChomskyGrammar* grammar, ParseTree** root) {
+        //cout << "Parse(" << sequence << "...)" << endl;
         string transformedSequence = Helper::TransformSequence(sequence);
+        cout << Rule::GetStartingID() << endl;
         if (Rule::GetStartingID() < 0) {
             cerr << "Missing starting non-terminal 'S'" << endl;
             *root = NULL;
@@ -28,24 +30,33 @@ private:
     vector<vector<vector<int> > > check;
 
     bool CockeYoungerKasami(const string& sequence, int starting, ChomskyGrammar* grammar, ParseTree** root) {
+        //cout << "CYK(" << sequence << " ...)" << endl;
         check.clear();
         vector<int> perNonTerminal(Rule::getNumNTs());
         vector<vector<int> > perLength;
-        for (size_t i = 0; i < sequence.size() + 1; i++) {
+        //cout << "A" << endl;
+        for (size_t i = 0; i <= sequence.size() + 1; i++) {
             perLength.push_back(perNonTerminal);
         }
-        for (size_t i = 0; i < sequence.size() + 1; i++) {
+        //cout << "B" << endl;
+        for (size_t i = 0; i <= sequence.size() + 1; i++) {
+            //cout<< "i=" << i << "/" << sequence.size() << endl;
+            //cout << check.size() << endl;
+            //cout << perLength.size() << endl;
             check.push_back(perLength);
         }
+        //cout << "C" << endl;
         for (size_t il = 0; il <= sequence.size(); il++) {
+          //  cout << "il1:" << il << endl;
             for (size_t len = 0; len <= sequence.size(); len++) {
-                for (size_t irule = 0; irule < grammar->rules.size(); irule++) {
+                for (size_t irule = 0; Rule::getNumNTs(); irule++) {
                     check[il][len][irule] = -1;
                 }
             }
         }
 
         for (size_t il = 0; il < sequence.size(); il++) {
+            //    cout << "il=" << il << endl;
             for (size_t irule = 0; irule < grammar->rules.size(); irule++) {
                 if (grammar->rules[irule].isTerminal()) {
                     string terminal = Rule::getNT(grammar->rules[irule].getTerminal());
@@ -56,6 +67,7 @@ private:
             }
         }
         for (int len = 2; len <= (int) sequence.size(); len++) {
+            //cout << "len=" << len << endl;
             for (int il = 0; il + len <= (int) sequence.size(); il++) {
                 for (int irule = 0; irule < (int) grammar->rules.size(); irule++) {
                     Rule rule = grammar->rules[irule];
@@ -81,6 +93,7 @@ private:
         return false;
     }
     ParseTree* GenParseTree(int il, int len, int prule, ChomskyGrammar* grammar, ParseTree* parent) {
+        //cout << il << ", " << len << ", " << prule << endl;
         ParseTree *root;
         for (int irule = 0; irule < (int) grammar->rules.size(); irule++) {
             Rule rule = grammar->rules[irule];

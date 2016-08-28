@@ -1,10 +1,11 @@
 #include "grammar.h"
 
 void ChomskyGrammar::LoadFromFile(const string& fileName) {
+    Rule::Reset();
     ifstream in(fileName.c_str());
     if (!in.is_open()) {
         cerr << "ERROR opening " << fileName << "." << endl;
-        return;
+        throw "Error opening file";
     }
     string line, NT, check, next;
     istringstream sin;
@@ -14,7 +15,7 @@ void ChomskyGrammar::LoadFromFile(const string& fileName) {
         if (Helper::Trim(line).size() == 0) continue;
         vector<string> parts = Helper::Tokenize(line, "->");
         if (parts.size() == 2) {
-            string leftSide = Helper::Trim(parts[0], " ");
+            string leftSide = Helper::Trim(parts[0], " ");            
             if (!Helper::IsNonTerminal(leftSide)) {
                 cerr << "ERROR line #" << lineNumber << ": invalid left side, must be non terminal" << endl;
                 continue;

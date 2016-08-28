@@ -1,4 +1,9 @@
 *.save-failed
+.gitattributes
+.vs/*
+Debug/*
+*.sdf
+
 # Compiled Object files
 *.slo
 *.lo

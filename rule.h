@@ -30,6 +30,7 @@ public:
     static int getNumNTs();
 
     static int GetStartingID();
+    static void Reset();
 protected:
     static map<string, int> NT2id;
     static map<int, string> id2NT;
