@@ -1,0 +1,33 @@
+# depslib dependency file v1.0
+1472372289 source:c:\users\sidejan\google drive\__misc\phd\inteligentnaobradateksta\cykalgorithm\cyk.cpp
+	<fstream>
+	<sstream>
+	<iostream>
+	<map>
+	<vector>
+	"helper.h"
+	"rule.h"
+	"parsetree.h"
+
+1472371842 c:\users\sidejan\google drive\__misc\phd\inteligentnaobradateksta\cykalgorithm\helper.h
+	<vector>
+	<string>
+
+1472371803 source:c:\users\sidejan\google drive\__misc\phd\inteligentnaobradateksta\cykalgorithm\helper.cpp
+	"helper.h"
+
+1472372191 c:\users\sidejan\google drive\__misc\phd\inteligentnaobradateksta\cykalgorithm\rule.h
+	<string>
+	<sstream>
+	<map>
+
+1472372195 source:c:\users\sidejan\google drive\__misc\phd\inteligentnaobradateksta\cykalgorithm\rule.cpp
+	"rule.h"
+
+1472372311 c:\users\sidejan\google drive\__misc\phd\inteligentnaobradateksta\cykalgorithm\parsetree.h
+	<string>
+	<sstream>
+
+1472372302 source:c:\users\sidejan\google drive\__misc\phd\inteligentnaobradateksta\cykalgorithm\parsetree.cpp
+	"parsetree.h"
+

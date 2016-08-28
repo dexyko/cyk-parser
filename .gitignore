@@ -1,3 +1,4 @@
+*.save-failed
 # Compiled Object files
 *.slo
 *.lo

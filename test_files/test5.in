@@ -1,0 +1,10 @@
+S -> NP VP
+Vt -> saw
+Det -> the
+Det -> a
+N -> dragon
+N -> boy
+Adj -> young
+VP -> Vt NP
+NP -> Det N
+N -> Adj N
